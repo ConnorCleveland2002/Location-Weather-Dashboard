@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark text-white" id="header">
+            <span class="navbar-brand mx-auto">Weather Dashboard</span>
+        </nav>
+    </header>
+
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-3'>
+                <aside>
+                    <div class='card search-section'>
+                        <div class='card-body'>
+                            <label>Search For a City:</label>
+                            <div class="input-group mb-3">
+                                <input id="cityEntered" type="text" class="form-control" placeholder="Input text here">
+                                <div class="input-group-append">
+                                    <button id='getEnteredCityWeather' class="btn btn-primary" type="submit">
+                                        <i id='getWeatherIcon' class="fas fa-search" aria-hidden="true">Search</i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div id='prevSearches'></div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <div class='col-md-9 '>
+                <main>
+                    <div class='row'>
+                        <div class='card'>
+                            <div class='card-body'>
+                                <h5 class='card-title' id='city'>City</h5>
+                                <ul>
+                                    <li><img id='currWeathIcn'></img></li>
+                                    <li class='card-text' id='currentTemperature'>Temperature:</li>
+                                    <li class='card-text' id='currentHumidity'>Humidity:</li>
+                                    <li class='card-text' id='currentWind'>Windspeed:</li>
+                                    <li class='card-text' id='currentUVIndex'>UV Index:</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <h5 class='card-title' id="fiveDayHeader">5-Day Forcast</h5>
+                    </div>
+                    <div class='row' id='forecast'></div>
+                </main>
+            </div>
+        </div>
+
+</body>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js'
+    integrity='sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs=' crossorigin='anonymous'></script>
+<script src='./script.js'></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/efd9680f52.js" crossorigin="anonymous"></script>
+
+
+</html>
